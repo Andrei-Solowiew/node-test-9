@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Document</title>
+	</head>
+	<style>
+		body {
+			max-width: 100%;
+			height: 100%;
+			margin: 0;
+			padding: 0 10px;
+			box-sizing: border-box;
+			border-radius: 5%;
+			font-size: 16px;
+			overflow: hidden;
+		}
+
+		a {
+			color: inherit;
+			text-decoration: none;
+		}
+
+		.practice {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			height: 100%;
+		}
+
+		.practice__content {
+			margin-bottom: 50px;
+			max-height: 300px;
+			overflow: auto;
+			overflow-x: hidden;
+		}
+
+		.practice__h4 {
+			margin: 11px 0;
+		}
+
+		.practice__answer {
+			display: flex;
+			gap: 20px;
+		}
+
+		.practice__buttons {
+			margin: 10px 0;
+			margin-bottom: 50px;
+			display: grid;
+			/* 	grid-template-columns: 1fr 1fr; */
+			grid-template-rows: repeat(2, 50px);
+			gap: 20px;
+		}
+
+		.practice__buttons-button {
+			width: 100%;
+			height: 100%;
+			cursor: pointer;
+		}
+
+		.practice__other-header {
+			/* 	font-size: 20px; */
+			margin-top: 0;
+			margin-bottom: 10px;
+			font-weight: 700;
+		}
+
+		.practice__other-tasks {
+			display: flex;
+			column-gap: 15px;
+			row-gap: 10px;
+			flex-wrap: wrap;
+			font-size: 20px;
+		}
+
+		.practice__other-task button {
+			cursor: pointer;
+		}
+
+		.practice__other-task_current button {
+			text-decoration: underline;
+		}
+		@media (max-height: 600px) {
+			body {
+				margin: 0 auto;
+			}
+		}
+	</style>
+	<body>
+		<div class="practice">
+			<div class="practice__content">
+				<p class="practice__tasks-header">
+					Создайте match для expression. Не забудьте двоеточие в конце.
+				</p>
+				<h4 class="practice__h4">Ответ:</h4>
+				<form class="practice__answer" action="">
+					<input
+						id="input"
+						class="practice__answer-input"
+						name="answer"
+						type="text"
+					/>
+					<label id="label" class="practice__answer-label" for="answer"></label>
+				</form>
+			</div>
+			<div class="practice__buttons">
+				<button
+					id="send"
+					class="practice__buttons-button_answer practice__buttons-button"
+				>
+					Отправить
+				</button>
+				<a class="practice__buttons-link" href="/theory5">
+					<button class="practice__buttons-button">Теория</button>
+				</a>
+				<script>
+					let btn = document.getElementById('send')
+					let input = document.getElementById('input')
+					let label = document.getElementById('label')
+					btn.onclick = function () {
+						console.log('adf')
+						let userAnswer = input.value
+						let correctAnswer = 'match expression:'
+						if (userAnswer == correctAnswer) {
+							label.textContent = 'Правильно'
+							label.style.color = '#00CF00'
+						} else {
+							label.textContent = 'Неправильно'
+							label.style.color = '#ff0000'
+						}
+					}
+				</script>
+				<!-- <a class="practice__buttons-link" href="theory.html">
+					<button class="practice__buttons-button">Назад</button>
+				</a>
+				<a class="practice__buttons-link" href="practice.html">
+					<button class="practice__buttons-button">Далее</button>
+				</a> -->
+			</div>
+			<div class="practice__other">
+				<h4 class="practice__other-header">Задачи:</h4>
+
+				<div class="practice__other-tasks">
+					<div class="practice__other-task">
+						<div class="practice__other-task">
+							<button><a href="/Z5-1">1</a></button>
+						</div>
+					</div>
+					<div class="practice__other-task_current practice__other-task">
+						<button><a href="/Z5-2">2</a></button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>

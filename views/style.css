@@ -1,0 +1,160 @@
+body {
+	max-width: 330px;
+	height: 480px;
+	margin: 50px auto;
+	padding: 10px 10px 20px 10px;
+	box-sizing: border-box;
+	border: 2px solid #000;
+	border-radius: 5%;
+	font-size: 16px;
+}
+/* button {
+	font-size: 18px;
+} */
+
+.main {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	max-height: 454px;
+	overflow: scroll;
+	overflow-x: hidden;
+	flex-direction: column;
+}
+
+.main__link {
+	display: block;
+	width: 280px;
+}
+
+.main__link-btn {
+	padding: 15px 0;
+	width: 280px;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+.main__emptiness {
+	height: 350px;
+}
+
+.modal {
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	width: 310px;
+	height: 450px;
+	background-color: rgba(128, 128, 128, 0.9);
+}
+
+.modal-p {
+	color: white;
+	font-size: 25px;
+	max-width: 200px;
+	text-align: center;
+}
+
+.modal-btn {
+	cursor: pointer;
+}
+
+.theory {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+}
+
+.theory__content {
+	max-height: 375px;
+	overflow: auto;
+	overflow-x: hidden;
+}
+
+.theory__img {
+	margin-bottom: 10px;
+	width: 275px;
+}
+
+.theory__link {
+	display: block;
+	margin-bottom: 10px;
+}
+
+.theory__buttons {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+}
+
+.theory__buttons-link {
+	text-decoration: none;
+}
+
+.theory__buttons-button {
+	display: block;
+	width: 100%;
+	cursor: pointer;
+	height: 50px;
+}
+
+.practice {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+}
+
+.practice__content {
+	max-height: 300px;
+	overflow: auto;
+	overflow-x: hidden;
+}
+
+.practice__h4 {
+	margin: 10px 0;
+}
+
+.practice__answer {
+	display: flex;
+	gap: 20px;
+}
+
+.practice__buttons {
+	margin: 10px 0;
+	display: grid;
+	/* 	grid-template-columns: 1fr 1fr; */
+	grid-template-rows: repeat(2, 50px);
+	gap: 20px;
+}
+
+.practice__buttons-button {
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+
+.practice__other-header {
+	/* 	font-size: 20px; */
+	margin-top: 0;
+	margin-bottom: 10px;
+	font-weight: 700;
+}
+
+.practice__other-tasks {
+	display: flex;
+	column-gap: 15px;
+	row-gap: 10px;
+	flex-wrap: wrap;
+	font-size: 20px;
+}
+
+/* .practice__tasks-task button {
+	text-decoration: none;
+} */
+
+.practice__other-task_current button {
+	text-decoration: underline;
+}

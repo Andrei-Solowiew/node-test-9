@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Document</title>
+	</head>
+	<style>
+		body {
+			max-width: 100%;
+			height: 100%;
+			margin: 0;
+			padding: 0 10px;
+			box-sizing: border-box;
+			border-radius: 5%;
+			font-size: 16px;
+			overflow: hidden;
+		}
+
+		.theory {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			height: 100%;
+		}
+
+		.theory__content {
+			margin-bottom: 20px;
+			max-height: 400px;
+			overflow: auto;
+			overflow-x: hidden;
+		}
+
+		.theory__h3 {
+			margin-bottom: 10px;
+		}
+
+		.theory__h4 {
+			margin-bottom: 10px;
+		}
+
+		.theory__p {
+			text-indent: 10%;
+			margin: 0;
+		}
+
+		.theory__ol,
+		.theory__ul {
+			margin: 0;
+		}
+
+		.theory__img {
+			margin-bottom: 10px;
+			width: 145px;
+		}
+
+		.theory__link {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		.theory__buttons {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 20px;
+		}
+
+		.theory__buttons-link {
+			text-decoration: none;
+		}
+
+		.theory__buttons-button {
+			display: block;
+			width: 100%;
+			cursor: pointer;
+			height: 50px;
+		}
+		@media (max-height: 600px) {
+			body {
+				margin: 0 auto;
+			}
+		}
+	</style>
+	<body>
+		<div class="theory">
+			<div class="theory__content">
+				<h2 class="theory__h2 h2">Типы данных</h2>
+				<p class="theory__p">
+					<strong>Тип данных</strong> - это своего рода "тип" или "вид"
+					информации, которую компьютер может понять и обрабатывать. Каждый тип
+					данных определяет, как компьютер будет хранить и использовать эту
+					информацию.
+				</p>
+
+				<p class="theory__p">
+					Давайте представим, что у вас есть коробка для хранения разных вещей.
+					Каждая вещь в этой коробке имеет свой тип: могут быть книги, игрушки,
+					одежда и так далее. В программировании это похоже. Вот некоторые
+					основные типы данных:
+				</p>
+				<ol class="theory__ol">
+					<li>Числа.</li>
+					<li>Последовательности.</li>
+					<li>Логический тип данных.</li>
+					<li>Наборы.</li>
+				</ol>
+				<h3 class="theory__h3 h3">Числа</h3>
+				<p class="theory__p p">Python поддерживает три типа числовых данных.</p>
+				<ul>
+					<li>
+						int – целочисленное значение может иметь любую длину, например целые
+						числа 10, 2, 29, -20, -150 и т.д. Python не имеет ограничений на
+						длину целого числа.
+					</li>
+					<li>
+						float – используется для хранения чисел с плавающей запятой, таких
+						как 1.9, 9.902, 15.2 и т. д. Имеет точность до 15 десятичных знаков.
+					</li>
+				</ul>
+
+				<h3 class="theory__h3 h3">Последовательности</h3>
+				<h4 class="theory__h4 h4">Строка</h4>
+				<p class="theory__p p">
+					Строку можно определить как последовательность символов,
+					представленных в кавычках. В Python мы можем использовать одинарные,
+					двойные или тройные кавычки для определения строки.
+				</p>
+				<p class="theory__p p">
+					Обработка строк в Python – простая задача, поскольку Python
+					предоставляет встроенные функции и операторы для выполнения операций
+					со строкой. В случае обработки строк оператор + используется для
+					объединения двух строк, поскольку операция «hello» + «python»
+					возвращает «hello python».
+				</p>
+				<p class="theory__p p">
+					Оператор * известен как оператор повторения, так как операция «Python»
+					* 2 возвращает «Python Python».
+				</p>
+				<h4 class="theory__h4 h4">Список</h4>
+				<p class="theory__p p">
+					Список может содержать данные разных типов. Элементы, хранящиеся в
+					списке, разделяются запятой(,) и заключаются в квадратные скобки [].
+				</p>
+				<p class="theory__p p">
+					Можем использовать оператор slice [:] для доступа к данным списка.
+					Операторы конкатенации(+) и повторения(*) работают со списком также
+					как со строками.
+				</p>
+				<h4 class="theory__h4 h4">Кортеж</h4>
+				<p class="theory__p p">
+					Список может содержать данные разных типов. Кортеж во многом похож на
+					список. Как и списки, кортежи также содержат коллекцию элементов
+					данных разных типов. Элементы кортежа разделяются запятой(,) и
+					заключаются в круглые скобки().
+				</p>
+				<p class="theory__p p">
+					Кортеж – это структура данных, доступная только для чтения, поскольку
+					размер и значения элементов кортежа являются неизменяемыми.
+				</p>
+				<h4 class="theory__h4 h4">Словарь</h4>
+				<p class="theory__p p">
+					Словарь – это неупорядоченный набор пары элементов “ключ-значение”.
+					Это похоже на хеш-таблицу, где каждый ключ хранит определенное
+					значение. Ключ может содержать любой примитивный тип данных, тогда как
+					значение – это произвольный объект Python.
+				</p>
+				<p class="theory__p p">
+					Элементы в словаре разделяются запятой(,) и заключаются в фигурные
+					скобки {}.
+				</p>
+				<h3 class="theory__h3 h3">Логический тип данных</h3>
+				<p class="theory__p p">
+					Тип Boolean предоставляет два встроенных значения: True и False. Эти
+					значения используются для определения истинности или ложности данного
+					утверждения.
+				</p>
+				<h3 class="theory__h3 h3">Наборы</h3>
+				<p class="theory__p p">
+					Python Set – это неупорядоченный набор типов данных. В наборе порядок
+					элементов не определен; он может вернуть измененную последовательность
+					элемента.
+				</p>
+				<p class="theory__p p">
+					Набор создается с помощью встроенной функции set() или
+					последовательность элементов передается в фигурных скобках и
+					разделяется запятой. Он может содержать различные типы значений.
+				</p>
+				<h2 class="theory__h2 h2">Переменные</h2>
+				<h3 class="theory__h3 h3">Создание переменных</h3>
+				<p class="theory__p p">
+					Чтобы присвоить значение переменной нужно использовать оператор
+					присваивания «=».
+				</p>
+				<p class="theory__p p">Пример:</p>
+				<img
+					class="theory__img"
+					src="https://imageup.ru/img102/4793872/example1.png"
+					alt="Пример 2"
+				/>
+				<h3 class="theory__h3 h3">
+					Множественное присвоение значений переменных
+				</h3>
+				<p class="theory__p p">
+					Применяется, если нужно присвоить значения сразу нескольким переменным
+					в одной строке.
+				</p>
+				<p class="theory__p p">Пример:</p>
+				<img
+					src="https://imageup.ru/img205/thumb/example24794362.jpg"
+					alt="Пример 2"
+				/>
+				<p class="theory__p p">
+					<strong>Константы</strong> - это фиксированные значения, которые
+					нельзя изменить после инициализации.
+				</p>
+				<p class="theory__p p">
+					<i
+						>В Python нет специального способа определения констант, и он обычно
+						выражается в именах переменных в верхнем регистре.</i
+					>
+				</p>
+				<h2 class="theory__h2 h2">Операторы</h2>
+				<p class="theory__p p">
+					<strong>Оператор в Python</strong> – это символ, который отвечает за
+					конкретную операцию между двумя операндами.
+				</p>
+				<p class="theory__p p">
+					<strong>Операндом</strong> выступает переменная или значение, над
+					которыми проводится операция.
+				</p>
+				<h3 class="theory__h3 h3">Выражения в Python</h3>
+				<p class="theory__p p">
+					<strong>Оператор (+)</strong> - функционал , представленный в виде
+					символов (например + ==) или зарезервированных слов (например and
+					not).
+				</p>
+				<p class="theory__p p">
+					<strong>Операнды (1 и 2)</strong> - это данные, над которыми
+					производится действия.
+				</p>
+				<img
+					src="https://imageup.ru/img253/thumb/theme2-expression14794436.jpg"
+					alt="Выражения"
+				/>
+				<h3 class="theory__h3 h3">Операторы сравнения</h3>
+				<img
+					src="https://imageup.ru/img89/thumb/theme2-operators-comparison4794437.jpg"
+					alt="Выражения"
+				/>
+				<h3 class="theory__h3 h3">Логические операторы</h3>
+				<img
+					src="https://imageup.ru/img95/thumb/theme2-operators-logic4794438.jpg"
+					alt="Выражения"
+				/>
+				<h3 class="theory__h3 h3">Арифметические операторы</h3>
+				<ul>
+					<li><span style="background-color: gainsboro">+</span> - сложение</li>
+					<li>
+						<span style="background-color: gainsboro">-</span> - вычитание
+					</li>
+					<li>
+						<span style="background-color: gainsboro">*</span> - умножение
+					</li>
+					<li><span style="background-color: gainsboro">/</span> - деление</li>
+					<li>
+						<span style="background-color: gainsboro">//</span> - целочисленное
+						деление(возвращает только целочисленную часть)
+					</li>
+					<li>
+						<span style="background-color: gainsboro">%</span> - деление по
+						модулю(возвращает остаток от деления)
+					</li>
+					<li>
+						<span style="background-color: gainsboro">**</span> - возведение в
+						степень
+					</li>
+				</ul>
+				<h3 class="theory__h3 h3">Операторы присваивания</h3>
+				<ul>
+					<li>
+						<span style="background-color: gainsboro">=</span> - значение
+						правого операнда присвоится левому операнду
+					</li>
+					<li>
+						<span style="background-color: gainsboro">+=</span> - сумма левого и
+						правого операнда присвоится левому операнду
+					</li>
+					<li>
+						<span style="background-color: gainsboro">-=</span> - разность
+						левого и правого операнда присвоится левому операнду
+					</li>
+					<li>
+						<span style="background-color: gainsboro">*=</span> - произведение
+						левого и правого операнда присвоится левому операнду
+					</li>
+					<li>
+						<span style="background-color: gainsboro">/=</span> - разделит левый
+						операнд на правый и результат присвоится левому операнду
+					</li>
+					<li>
+						<span style="background-color: gainsboro">//=</span> - результат
+						целочисленного деления левого операнда на правый операнд присвоится
+						левому операнду
+					</li>
+					<li>
+						<span style="background-color: gainsboro">%=</span> - разделит левый
+						операнд на правый по модулю и результат присвоится левому операнду
+					</li>
+					<li>
+						<span style="background-color: gainsboro">**=</span> - возведет
+						левый операнд в степень правого и результат присвоится левому
+						операнду
+					</li>
+				</ul>
+				<a
+					class="theory__link"
+					href="https://pymanual.github.io/operations.html"
+					>Дополнительная информация по операторам</a
+				>
+				<h2 class="theory__h2 h2">Ввод/вывод данных</h2>
+				<h3 class="theory__h3 h3">Ввод данных</h3>
+				<p class="theory__p p">
+					Для ввода данных используется функция intput()
+				</p>
+				<p class="theory__p p">a=input()</p>
+				<p class="theory__p p">Можно преобразовать в:</p>
+				<ul class="theory__ul">
+					<li>Число: a=int(input())</li>
+					<li>Вещественное число: a=float(input())</li>
+				</ul>
+				<h3 class="theory__h3 h3">Ввод данных в одну строку</h3>
+				<p class="theory__p p">a,b = input().split()</p>
+				<h3 class="theory__h3 h3">Вывод данных</h3>
+				<p class="theory__p p">
+					Для вывода данных используется оператор вывода print().
+				</p>
+				<p class="theory__p p">
+					print(<выражение 1>,<выражение 2>,<выражение N>)
+				</p>
+				<h3 class="theory__h3 h3">Примеры организации вывода данных:</h3>
+				<p class="theory__p p">
+					print(a,end=””) – Убран переход на новую строку
+				</p>
+				<p class="theory__p p">print(b)</p>
+				<p class="theory__p p">
+					Оператор <strong>print</strong> вставляет между выводимыми значениями
+					так называемый разделитель (или сепаратор, англ. separator). По
+					умолчанию разделитель – это пробел, но его можно заменить на другой,
+					указав новый разделитель после слова <strong>sep</strong>.
+				</p>
+				<a
+					class="theory__link"
+					href="https://docs.python.org/3/tutorial/inputoutput.html"
+					>Дополнительная информация</a
+				>
+			</div>
+
+			<div class="theory__buttons">
+				<a class="theory__buttons-link" href="/">
+					<button class="theory__buttons-button">Назад</button>
+				</a>
+				<a class="theory__buttons-link" href="/Z1">
+					<button class="theory__buttons-button">Практика</button>
+				</a>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Знакомство с языком программирования Python</title>
+		<style>
+			body {
+				max-width: 100%;
+				height: 100%;
+				margin: 0;
+				padding: 0 10px;
+				box-sizing: border-box;
+				border-radius: 5%;
+				font-size: 16px;
+				overflow: hidden;
+			}
+
+			.theory {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				height: 100%;
+			}
+
+			.theory__content {
+				margin-bottom: 20px;
+				max-height: 400px;
+				overflow: auto;
+				overflow-x: hidden;
+			}
+
+			.theory__h3 {
+				margin-bottom: 10px;
+			}
+
+			.theory__h4 {
+				margin-bottom: 10px;
+			}
+
+			.theory__p {
+				text-indent: 10%;
+				margin: 0;
+			}
+
+			.theory__ol,
+			.theory__ul {
+				margin: 0;
+			}
+
+			.theory__img {
+				margin-bottom: 10px;
+				width: 145px;
+			}
+
+			.theory__link {
+				display: block;
+				margin-bottom: 10px;
+			}
+
+			.theory__buttons {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 20px;
+			}
+
+			.theory__buttons-link {
+				text-decoration: none;
+			}
+
+			.theory__buttons-button {
+				display: block;
+				width: 100%;
+				cursor: pointer;
+				height: 50px;
+			}
+
+			@media (max-height: 600px) {
+				body {
+					margin: 0 auto;
+				}
+			}
+		</style>
+	</head>
+	<body class="theory">
+		<div class="theory__content">
+			<h1 class="theory__h1">Работа с файлами</h1>
+
+			<h2 class="theory__h2">Работа с файлами в Python</h2>
+			<p class="theory__p">
+				Python предоставляет простые и эффективные способы работы с файлами. В
+				основе этого процесса лежат функции open(), read(), write() и close().
+			</p>
+
+			<h3 class="theory__h3">Открытие файла</h3>
+			<p class="theory__p">
+				Файлы в Python открываются с помощью функции open(). Она принимает путь
+				к файлу и режим доступа. Например: file = open("example.txt", "r") где
+				"example.txt" - имя файла, а "r" - режим чтения (read). Другие режимы
+				включают "w" (запись), "a" (дозапись), "rb" (бинарное чтение), "wb"
+				(бинарная запись) и так далее.
+			</p>
+
+			<h3 class="theory__h3">Чтение из файла</h3>
+			<p class="theory__p">
+				Для чтения данных из файла используется метод read(). Он возвращает
+				содержимое файла в виде строки. Например: content = file.read()
+			</p>
+
+			<h3 class="theory__h3">Запись в файл</h3>
+			<p class="theory__p" style="margin-bottom: 25px">
+				Для записи данных в файл используется метод write(). Он принимает строку
+				и записывает ее в файл. Например: file.write("Hello, World!")
+			</p>
+
+			<a class="theory__link" href="https://docs.python.org/3/index.html"
+				>Дополнительная информация</a
+			>
+		</div>
+
+		<div class="theory__buttons">
+			<a class="theory__buttons-link" href="/">
+				<button class="theory__buttons-button">Назад</button>
+			</a>
+			<a class="theory__buttons-link" href="/Z2-1">
+				<button class="theory__buttons-button">Практика</button>
+			</a>
+		</div>
+	</body>
+</html>
